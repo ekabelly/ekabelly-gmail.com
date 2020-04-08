@@ -1,0 +1,6 @@
+<div class="product-list flex flex-wrap">
+    <div *ngFor="let product of products" class="product-wrapper">
+        <app-product-item-list [product]="product">
+        </app-product-item-list>
+    </div>
+</div>

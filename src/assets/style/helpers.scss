@@ -1,0 +1,39 @@
+
+.relat {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+
+@media (min-wdith: 725px){
+    .pointer {
+        cursor: pointer;
+    }
+}

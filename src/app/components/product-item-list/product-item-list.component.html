@@ -1,0 +1,22 @@
+<div class="product">
+    <div class="product-img">
+        <img [src]="product.mainPic" alt="">
+    </div>
+    <div class="product-desc flex space-between">
+        <div>
+            <div class="product-name">
+                {{ product.name }}
+            </div>
+            <div class="flex">
+                <div class="desc">
+                    {{ product.desc }}
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="price">
+                {{ product.price }}$
+            </div>
+        </div>
+    </div>
+</div>

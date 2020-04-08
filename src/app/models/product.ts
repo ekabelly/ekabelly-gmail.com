@@ -1,6 +1,9 @@
 export interface Product {
-    name: String;
-    price: String;
+    name: string;
+    id: string;
+    price: string;
     desc: Object;
     additionalProperties: Object;
+    mainPic: string;
+    imgs: string[];
 }
