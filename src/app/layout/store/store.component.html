@@ -14,7 +14,7 @@
     </div>
     <div class="producst-list-wrapper">
         <div class="products-num flex justify-center">
-            {{ store.products.length }} items
+            {{ store.products.length }} {{ $t('items') }}
         </div>
         <app-products-list [products]="store.products"></app-products-list>
     </div>

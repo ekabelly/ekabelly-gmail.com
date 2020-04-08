@@ -4,13 +4,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from 'src/app/models/store';
 import { StoreService } from 'src/app/services/store.service';
 import * as util from 'src/app/util/app-util';
+import { i18n } from '../../mixins';
 
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.css']
 })
-export class StoreComponent implements OnInit {
+export class StoreComponent extends i18n implements OnInit {
 
   store: Store = {
     name: '',
@@ -20,7 +21,9 @@ export class StoreComponent implements OnInit {
     logo:''
   };
 
-  constructor(private storeService: StoreService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private storeService: StoreService, private route: ActivatedRoute, private router: Router) {
+    super();
+  }
 
   ngOnInit(): void {
     const { storeId } = this.route.snapshot.params;
