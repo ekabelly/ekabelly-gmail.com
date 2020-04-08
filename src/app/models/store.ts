@@ -6,4 +6,5 @@ export interface Store {
     products: Product[];
     favicon: string;
     logo: string;
+    textLogo?: string; 
 }

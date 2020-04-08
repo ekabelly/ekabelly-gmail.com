@@ -1,0 +1,25 @@
+.store-name {
+    width: min-content;
+    position: relative;
+    margin: 0 auto;
+}
+
+.store-name-text {
+    font-size: 58px;
+    font-weight: 600;
+}
+
+.text-logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 110%;
+}
+
+.text-logo img {
+    height: 100%;
+}
+
+.products-num {
+    margin-top: 20px;
+}
