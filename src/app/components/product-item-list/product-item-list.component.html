@@ -9,13 +9,19 @@
             </div>
             <div class="flex">
                 <div class="desc">
-                    {{ product.desc }}
+                    {{ product.brandName }}
                 </div>
             </div>
         </div>
         <div>
             <div class="price">
+                {{ product.salePrice || product.price }}$
+            </div>
+            <div *ngIf="product.salePrice" class="sale-price">
                 {{ product.price }}$
+            </div>
+            <div *ngIf="product.salePrice" class="sale-precent">
+                {{ product.salePrecent }}
             </div>
         </div>
     </div>

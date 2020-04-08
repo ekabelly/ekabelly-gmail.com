@@ -2,10 +2,11 @@ import productImgStub from './product-img.stub';
 
 export default [
     {
-        name: '1234',
+        name: 'Cool Shoe',
         id: '1234d',
         price: '59.90',
         desc: 'desc',
+        brandName: 'New Balance',
         additionalProperties: {
             cool: 'its pretty cool',
             flexible:'its flexible'
@@ -14,10 +15,11 @@ export default [
         imgs:[]
     },
     {
-        name: '1234',
+        name: 'other shoe',
         id: '1234d',
         price: '59.90',
         desc: 'desc',
+        brandName: 'Addidas',
         additionalProperties: {
             cool: 'its pretty cool',
             flexible:'its flexible'
@@ -26,10 +28,11 @@ export default [
         imgs:[]
     },
     {
-        name: '1234',
+        name: 'also shoe',
         id: '1234d',
         price: '59.90',
         desc: 'desc',
+        brandName: 'Addidas',
         additionalProperties: {
             cool: 'its pretty cool',
             flexible:'its flexible'
@@ -38,10 +41,13 @@ export default [
         imgs:[]
     },
     {
-        name: '1234',
+        name: 'shoemaker',
         id: '1234d',
         price: '59.90',
+        salePrice: '49.90',
+        salePrecent: '17% OFF',
         desc: 'desc',
+        brandName: 'Addidas',
         additionalProperties: {
             cool: 'its pretty cool',
             flexible:'its flexible'

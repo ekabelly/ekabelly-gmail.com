@@ -1,3 +1,5 @@
+@import '../../../styles.scss';
+
 .product-img {
     width: 100%;
     height: 200px;
@@ -11,4 +13,30 @@
 
 .product-name {
     font-size: 18px;
+}
+
+.price {
+    font-weight: 600;
+}
+
+.sale-price {
+    text-decoration: line-through;
+}
+
+.sale-precent {
+    color: white;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 18px;
+}
+
+// ! desktop
+@media (min-width: $desktop-width){
+    .product:hover {
+        -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
 }
