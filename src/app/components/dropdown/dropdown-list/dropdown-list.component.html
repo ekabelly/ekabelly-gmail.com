@@ -1,0 +1,5 @@
+<div class="dropdown-list" *ngIf="isOpen">
+    <div *ngFor="let item of items" class="dropdown-item" (click)="onItemClick(item.value)">
+        {{ item.label }}
+    </div>
+</div>

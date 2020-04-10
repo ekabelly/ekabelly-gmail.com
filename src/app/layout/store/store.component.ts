@@ -5,6 +5,7 @@ import { Store } from 'src/app/models/store';
 import { StoreService } from 'src/app/services/store.service';
 import * as util from 'src/app/util/app-util';
 import { i18n } from '../../mixins';
+import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-store',
@@ -16,10 +17,12 @@ export class StoreComponent extends i18n implements OnInit {
   store: Store = {
     name: '',
     id: null,
-    products: [],
+    categories: {},
     favicon: '',
     logo:''
   };
+
+  filteredProducts: Product[] = []
 
   constructor(private storeService: StoreService, private route: ActivatedRoute, private router: Router) {
     super();
@@ -36,7 +39,26 @@ export class StoreComponent extends i18n implements OnInit {
   
   setComponentData(store: Store){
     this.store = store;
+    this.filteredProducts = this.getStoreMainProducts();
     util.setPageAttrs(store.name, store.favicon);
+  }
+
+  getStoreProductsAmount(): number{
+    return this.filteredProducts.length
+  }
+
+  getStoreMainProducts(): Product[]{
+    const categories = [...Object.values(this.store.categories)];
+    return categories.flat();
+  }
+
+  getProductsByCategory(category: string): Product[]| []{
+    return this.store.categories[category] || []
+  }
+
+  onSortSelected(sortBy: string){
+    const products = this.getStoreMainProducts();
+    this.filteredProducts = util.sortProductsArr(products, sortBy);
   }
 
 }

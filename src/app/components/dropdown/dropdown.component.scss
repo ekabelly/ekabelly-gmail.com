@@ -1,0 +1,16 @@
+.dropdown {
+    position: relative;
+    width: 100%;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.dropdown-arrow {
+    max-width: 15px;
+    margin-left: 5px;
+    transition: linear transform 0.1s;
+
+    &.is-open {
+        transform: rotate(180deg);
+    }
+}

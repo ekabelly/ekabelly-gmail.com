@@ -13,9 +13,23 @@
         </div>
     </div>
     <div class="producst-list-wrapper">
-        <div class="products-num flex justify-center">
-            {{ store.products.length }} {{ $t('items') }}
+        <div class="filter-sort flex space-around">
+            <div class="filter btn">
+                {{ $t('filterBy') }}
+            </div>
+            <!-- <div class="sort btn">
+                {{ $t('sortBy') }}
+            </div> -->
+            <app-dropdown 
+                [dropdownLabel]="$t('sortBy')" 
+                (selected)="onSortSelected($event)"
+                [items]="store.sortBy"
+            >
+            </app-dropdown>
         </div>
-        <app-products-list [products]="store.products"></app-products-list>
+        <div class="products-num flex justify-center">
+            {{ getStoreProductsAmount() }} {{ $t('items') }}
+        </div>
+        <app-products-list [products]="filteredProducts"></app-products-list>
     </div>
 </div>

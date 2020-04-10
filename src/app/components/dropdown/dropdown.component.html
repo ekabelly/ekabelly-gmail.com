@@ -1,0 +1,7 @@
+<div class="dropdown" (clickOutside)="clickOutside()">
+    <div class="text btn flex align-center space-between" (click)="isOpen = !isOpen">
+      <div class="text"> {{ selectedValue || dropdownLabel }} </div>
+      <img class="dropdown-arrow" [ngClass]="{ 'is-open': isOpen }" src="../../../assets/img/arrow.png" alt="">
+    </div>
+    <app-dropdown-list (selected)="onSelected($event)" [items]="items" [isOpen]="isOpen"></app-dropdown-list>
+  </div>

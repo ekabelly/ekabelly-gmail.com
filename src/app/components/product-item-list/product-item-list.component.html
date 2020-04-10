@@ -12,6 +12,14 @@
                     {{ product.brandName }}
                 </div>
             </div>
+            <div class="product-extra">
+                <div class="cool" *ngIf="product.additionalProperties.cool">
+                    cool
+                </div>
+                <div class="cool" *ngIf="product.additionalProperties.new">
+                    new
+                </div>
+            </div>
         </div>
         <div>
             <div class="price">

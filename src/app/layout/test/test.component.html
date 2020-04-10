@@ -1,0 +1,16 @@
+<div class="test">
+    <h1>test works!</h1>
+    <div class="dropdown-test">
+        <div>
+            selected value: {{ selected }}
+        </div>
+        <div class="dropdown-warpper">
+            <app-dropdown 
+                dropdownLabel="select" 
+                (selected)="onSelected($event)" 
+                [items]="[{label:'price', value:'PRICE'},{label: 'sale', value:'SALE'}]"
+                >
+            </app-dropdown>
+        </div>
+    </div>
+</div>

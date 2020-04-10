@@ -4,9 +4,10 @@ export interface Product {
     price: string;
     salePrice?: string;
     salePrecent?: string;
+    salePrecentNum?: number;
     desc: Object;
     brandName: string;
-    additionalProperties: Object;
+    additionalProperties?: any;
     mainPic: string;
     imgs: string[];
 }

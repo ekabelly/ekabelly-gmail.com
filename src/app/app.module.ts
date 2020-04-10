@@ -11,6 +11,10 @@ import { NavComponent } from './components/nav/nav.component';
 import { StoreLogoComponent } from './components/store-logo/store-logo.component';
 import { ProductItemListComponent } from './components/product-item-list/product-item-list.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { DropdownListComponent } from './components/dropdown/dropdown-list/dropdown-list.component';
+import { TestComponent } from './layout/test/test.component';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ProductsListComponent } from './components/products-list/products-list.
     StoreLogoComponent,
     ProductItemListComponent,
     ProductsListComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    DropdownComponent,
+    DropdownListComponent,
+    TestComponent,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,
